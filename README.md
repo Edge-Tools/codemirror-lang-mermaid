@@ -1,4 +1,4 @@
-# codemirror-lang-mermaid
+# @edgetools/codemirror-lang-mermaid
 
 This package implements Mermaid language support for the CodeMirror code editor. Get syntax highlighting for Mermaid diagrams!
 
@@ -6,13 +6,13 @@ This package implements Mermaid language support for the CodeMirror code editor.
 
 Install the package:
 ```
-npm install codemirror-lang-mermaid
+npm install @edgetools/codemirror-lang-mermaid
 ```
 
 Example usage:
 ```js
 import { basicSetup, EditorView } from 'codemirror';
-import { mermaid, mindmapTags } from 'codemirror-lang-mermaid';
+import { mermaid, mindmapTags } from '@edgetools/codemirror-lang-mermaid';
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 
 const myHighlightStyle = HighlightStyle.define([
@@ -90,7 +90,7 @@ Below is an example of using custom tags to highlight tokens in a pie chart Merm
 
 ```js
 import { basicSetup, EditorView } from 'codemirror';
-import { mermaid, pieTags } from 'codemirror-lang-mermaid';
+import { mermaid, pieTags } from '@edgetools/codemirror-lang-mermaid';
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 
 const myHighlightStyle = HighlightStyle.define([
@@ -124,7 +124,7 @@ Below is an example of using parent tags (defined by CodeMirror) to highlight to
 
 ```js
 import { basicSetup, EditorView } from 'codemirror';
-import { mermaid } from 'codemirror-lang-mermaid';
+import { mermaid } from '@edgetools/codemirror-lang-mermaid';
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 import { tags as t } from '@lezer/highlight';
 
@@ -155,12 +155,12 @@ Running this code in the browser should result in the following syntax highlight
 ### When to use Custom Tags vs Parent Tags
 It's up to your preference! Though, I personally prefer custom tags 🙂. As stated previously, each Mermaid diagram requires its own Lezer grammar file, which essentially means each diagram uses its own "language." The language used in Mermaid diagrams is very different than typical programming languages and therefore will have tokens that don't have a corresponding match in CodeMirror's list of [tags](https://lezer.codemirror.net/docs/ref/#highlight.tags).
 
-The custom tags in the `codemirror-lang-mermaid` package provide a bit more control of what tokens get syntax highlighting. Notice that in the pie chart example above, `t.string` is both the parent of `pieTags.string` and `pieTags.titleText`. I created two custom tags to style the `TitleText` token differently than the `String` tokens. However, if your app already has a color theme and you don't want the overhead of custom tags, then continue using the parent tags.
+The custom tags in the `@edgetools/codemirror-lang-mermaid` package provide a bit more control of what tokens get syntax highlighting. Notice that in the pie chart example above, `t.string` is both the parent of `pieTags.string` and `pieTags.titleText`. I created two custom tags to style the `TitleText` token differently than the `String` tokens. However, if your app already has a color theme and you don't want the overhead of custom tags, then continue using the parent tags.
 
 Do note that not all custom tags have parent tags (i.e. most of the mindmap tags) which means you'll still need to use custom tags for those tokens. The mindmap diagram has special syntax highlighting that changes depending on how many indentions there are on each line.
 
 ## Extensions
-The `codemirror-lang-mermaid` package provides support for the following extension:
+The `@edgetools/codemirror-lang-mermaid` package provides support for the following extension:
 
 - [foldByIndent](https://github.com/Edge-Tools/codemirror-lang-mermaid/blob/main/src/extensions/index.ts)
 
@@ -169,7 +169,7 @@ By enabling the `foldByIndent` extension, the CodeMirror editor will add code fo
 Example usage:
 ```js
 import { basicSetup, EditorView } from 'codemirror';
-import { mermaid, mindmapTags } from 'codemirror-lang-mermaid';
+import { mermaid, mindmapTags } from '@edgetools/codemirror-lang-mermaid';
 import { HighlightStyle, syntaxHighlighting } from '@codemirror/language';
 
 const myHighlightStyle = HighlightStyle.define([

@@ -1,7 +1,10 @@
 {
-  "name": "codemirror-lang-mermaid",
+  "name": "@edgetools/codemirror-lang-mermaid",
   "author": "Nathan Vaughn <inspirnathan@gmail.com>",
   "version": "0.6.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Mermaid language support for CodeMirror",
   "scripts": {
     "test": "mocha test/test.js",
@@ -24,10 +27,21 @@
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "exports": {
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
   },
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "sideEffects": false,
   "dependencies": {
     "@codemirror/language": "^6.12.4",
