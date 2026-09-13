@@ -9,6 +9,19 @@ import {
   journeyParser,
   requirementParser,
   ganttParser,
+  timelineParser,
+  quadrantParser,
+  sankeyParser,
+  xychartParser,
+  packetParser,
+  kanbanParser,
+  blockParser,
+  architectureParser,
+  classParser,
+  stateParser,
+  erParser,
+  gitParser,
+  c4Parser,
 } from '../parsers';
 import { DiagramType, MermaidLanguageType } from '../types';
 
@@ -31,6 +44,32 @@ export const mermaidLanguage = LRLanguage.define({
           return { parser: requirementParser };
         case DiagramType.Gantt:
           return { parser: ganttParser };
+        case DiagramType.Timeline:
+          return { parser: timelineParser };
+        case DiagramType.Quadrant:
+          return { parser: quadrantParser };
+        case DiagramType.Sankey:
+          return { parser: sankeyParser };
+        case DiagramType.Xychart:
+          return { parser: xychartParser };
+        case DiagramType.Packet:
+          return { parser: packetParser };
+        case DiagramType.Kanban:
+          return { parser: kanbanParser };
+        case DiagramType.Block:
+          return { parser: blockParser };
+        case DiagramType.Architecture:
+          return { parser: architectureParser };
+        case DiagramType.Class:
+          return { parser: classParser };
+        case DiagramType.State:
+          return { parser: stateParser };
+        case DiagramType.Er:
+          return { parser: erParser };
+        case DiagramType.Git:
+          return { parser: gitParser };
+        case DiagramType.C4:
+          return { parser: c4Parser };
         default:
           return null;
       }
@@ -71,4 +110,69 @@ export const requirementLanguage = LRLanguage.define({
 export const ganttLanguage = LRLanguage.define({
   name: MermaidLanguageType.Gantt,
   parser: ganttParser,
+});
+
+export const timelineLanguage = LRLanguage.define({
+  name: MermaidLanguageType.Timeline,
+  parser: timelineParser,
+});
+
+export const quadrantLanguage = LRLanguage.define({
+  name: MermaidLanguageType.Quadrant,
+  parser: quadrantParser,
+});
+
+export const sankeyLanguage = LRLanguage.define({
+  name: MermaidLanguageType.Sankey,
+  parser: sankeyParser,
+});
+
+export const xychartLanguage = LRLanguage.define({
+  name: MermaidLanguageType.Xychart,
+  parser: xychartParser,
+});
+
+export const packetLanguage = LRLanguage.define({
+  name: MermaidLanguageType.Packet,
+  parser: packetParser,
+});
+
+export const kanbanLanguage = LRLanguage.define({
+  name: MermaidLanguageType.Kanban,
+  parser: kanbanParser,
+});
+
+export const blockLanguage = LRLanguage.define({
+  name: MermaidLanguageType.Block,
+  parser: blockParser,
+});
+
+export const architectureLanguage = LRLanguage.define({
+  name: MermaidLanguageType.Architecture,
+  parser: architectureParser,
+});
+
+export const classLanguage = LRLanguage.define({
+  name: MermaidLanguageType.Class,
+  parser: classParser,
+});
+
+export const stateLanguage = LRLanguage.define({
+  name: MermaidLanguageType.State,
+  parser: stateParser,
+});
+
+export const erLanguage = LRLanguage.define({
+  name: MermaidLanguageType.Er,
+  parser: erParser,
+});
+
+export const gitLanguage = LRLanguage.define({
+  name: MermaidLanguageType.Git,
+  parser: gitParser,
+});
+
+export const c4Language = LRLanguage.define({
+  name: MermaidLanguageType.C4,
+  parser: c4Parser,
 });

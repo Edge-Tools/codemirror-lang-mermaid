@@ -1,4 +1,33 @@
-# [0.5.0](https://github.com/inspirnathan/codemirror-lang-mermaid/compare/v0.4.1...v0.5.0) (2023-09-14)
+# [0.6.0](https://github.com/Edge-Tools/codemirror-lang-mermaid/compare/v0.5.0...v0.6.0) (2026-09-13)
+
+### Features
+
+Added grammars, language support, language descriptions, and custom highlighting tags for many more Mermaid diagram types:
+
+- timeline diagram support
+- quadrant chart support
+- class diagram support (`classDiagram` / `classDiagram-v2`)
+- state diagram support (`stateDiagram` / `stateDiagram-v2`)
+- entity relationship diagram support
+- git graph support
+- C4 diagram support (`C4Context`, `C4Container`, `C4Component`, `C4Dynamic`, `C4Deployment`)
+- sankey diagram support (`sankey-beta`)
+- XY chart support (`xychart-beta`)
+- block diagram support (`block-beta`)
+- packet diagram support (`packet-beta`)
+- kanban board support
+- architecture diagram support (`architecture-beta`)
+
+The all-encompassing `mermaid()` extension now auto-detects all of the above diagram types in addition to the previously supported ones.
+
+### Chores
+
+- move the project to the [Edge-Tools](https://github.com/Edge-Tools/codemirror-lang-mermaid) organization
+- refresh `@codemirror/language` and `@lezer/*` dependencies
+
+
+
+# [0.5.0](https://github.com/Edge-Tools/codemirror-lang-mermaid/compare/v0.4.1...v0.5.0) (2023-09-14)
 
 ### Features
 
@@ -12,7 +41,7 @@
 
 
 
-## [0.4.1](https://github.com/inspirnathan/codemirror-lang-mermaid/compare/v0.4.0...v0.4.1) (2023-08-23)
+## [0.4.1](https://github.com/Edge-Tools/codemirror-lang-mermaid/compare/v0.4.0...v0.4.1) (2023-08-23)
 
 ### Features
 
@@ -21,7 +50,7 @@
 
 
 
-# [0.4.0](https://github.com/inspirnathan/codemirror-lang-mermaid/compare/v0.3.0...v0.4.0) (2023-08-06)
+# [0.4.0](https://github.com/Edge-Tools/codemirror-lang-mermaid/compare/v0.3.0...v0.4.0) (2023-08-06)
 
 ### Features
 
@@ -30,7 +59,7 @@
 
 
 
-# [0.3.0](https://github.com/inspirnathan/codemirror-lang-mermaid/compare/v0.2.2...v0.3.0) (2023-07-14)
+# [0.3.0](https://github.com/Edge-Tools/codemirror-lang-mermaid/compare/v0.2.2...v0.3.0) (2023-07-14)
 
 ### Features
 
@@ -39,7 +68,7 @@
 
 
 
-## [0.2.2](https://github.com/inspirnathan/codemirror-lang-mermaid/compare/v0.2.1...v0.2.2) (2023-06-26)
+## [0.2.2](https://github.com/Edge-Tools/codemirror-lang-mermaid/compare/v0.2.1...v0.2.2) (2023-06-26)
 
 ### Features
 
@@ -47,7 +76,7 @@
 
 
 
-## [0.2.1](https://github.com/inspirnathan/codemirror-lang-mermaid/compare/v0.2.0...v0.2.1) (2023-02-20)
+## [0.2.1](https://github.com/Edge-Tools/codemirror-lang-mermaid/compare/v0.2.0...v0.2.1) (2023-02-20)
 
 ### Features
 
@@ -55,7 +84,7 @@
 
 
 
-# [0.2.0](https://github.com/inspirnathan/codemirror-lang-mermaid/compare/v0.1.1...v0.2.0) (2023-02-20)
+# [0.2.0](https://github.com/Edge-Tools/codemirror-lang-mermaid/compare/v0.1.1...v0.2.0) (2023-02-20)
 
 ### Features
 
@@ -66,7 +95,7 @@
 
 
 
-## [0.1.1](https://github.com/inspirnathan/codemirror-lang-mermaid/compare/v0.1.0...v0.1.1) (2023-02-19)
+## [0.1.1](https://github.com/Edge-Tools/codemirror-lang-mermaid/compare/v0.1.0...v0.1.1) (2023-02-19)
 
 ### Features
 

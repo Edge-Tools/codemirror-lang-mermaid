@@ -7,6 +7,19 @@ import {
   journeyLanguage,
   requirementLanguage,
   ganttLanguage,
+  timelineLanguage,
+  quadrantLanguage,
+  sankeyLanguage,
+  xychartLanguage,
+  packetLanguage,
+  kanbanLanguage,
+  blockLanguage,
+  architectureLanguage,
+  classLanguage,
+  stateLanguage,
+  erLanguage,
+  gitLanguage,
+  c4Language,
 } from '../dist/index.js';
 import { fileTests } from '@lezer/generator/dist/test';
 import * as fs from 'fs';
@@ -22,6 +35,19 @@ const languages = [
   journeyLanguage,
   requirementLanguage,
   ganttLanguage,
+  timelineLanguage,
+  quadrantLanguage,
+  sankeyLanguage,
+  xychartLanguage,
+  packetLanguage,
+  kanbanLanguage,
+  blockLanguage,
+  architectureLanguage,
+  classLanguage,
+  stateLanguage,
+  erLanguage,
+  gitLanguage,
+  c4Language,
 ];
 
 let testDir = path.dirname(fileURLToPath(import.meta.url));

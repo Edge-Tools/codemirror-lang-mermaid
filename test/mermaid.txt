@@ -61,3 +61,107 @@ gantt
 ==>
 
 MermaidDiagram(GanttDiagram(DiagramName))
+
+# Timeline
+
+timeline
+
+==>
+
+MermaidDiagram(TimelineDiagram(DiagramName))
+
+# QuadrantChart
+
+quadrantChart
+
+==>
+
+MermaidDiagram(QuadrantDiagram(DiagramName))
+
+# Sankey
+
+sankey-beta
+
+==>
+
+MermaidDiagram(SankeyDiagram(DiagramName))
+
+# XYChart
+
+xychart-beta
+
+==>
+
+MermaidDiagram(XYChartDiagram(DiagramName))
+
+# Packet
+
+packet-beta
+
+==>
+
+MermaidDiagram(PacketDiagram(DiagramName))
+
+# Kanban
+
+kanban
+
+==>
+
+MermaidDiagram(KanbanDiagram(DiagramName))
+
+# Block
+
+block-beta
+
+==>
+
+MermaidDiagram(BlockDiagram(DiagramName))
+
+# Architecture
+
+architecture-beta
+
+==>
+
+MermaidDiagram(ArchitectureDiagram(DiagramName))
+
+# ClassDiagram
+
+classDiagram
+
+==>
+
+MermaidDiagram(ClassDiagram(DiagramName))
+
+# StateDiagram
+
+stateDiagram-v2
+
+==>
+
+MermaidDiagram(StateDiagram(DiagramName))
+
+# ERDiagram
+
+erDiagram
+
+==>
+
+MermaidDiagram(ERDiagram(DiagramName))
+
+# GitGraph
+
+gitGraph
+
+==>
+
+MermaidDiagram(GitDiagram(DiagramName))
+
+# C4Context
+
+C4Context
+
+==>
+
+MermaidDiagram(C4Diagram(DiagramName))

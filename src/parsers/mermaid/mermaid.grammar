@@ -1,4 +1,6 @@
-// See this link for entire Pie chart syntax in Mermaid: https://mermaid.js.org/syntax/pie.html#syntax
+// The mermaid "dispatcher" grammar detects the diagram type from the first
+// meaningful line and emits a single node for it. The main mermaidLanguage then
+// uses parseMixed to hand that node's range to the matching sub-diagram parser.
 @top MermaidDiagram {
   preDiagramLine* (
     PieDiagram |
@@ -7,7 +9,20 @@
     SequenceDiagram |
     JourneyDiagram |
     RequirementDiagram |
-    GanttDiagram
+    GanttDiagram |
+    TimelineDiagram |
+    QuadrantDiagram |
+    SankeyDiagram |
+    XYChartDiagram |
+    PacketDiagram |
+    KanbanDiagram |
+    BlockDiagram |
+    ArchitectureDiagram |
+    ClassDiagram |
+    StateDiagram |
+    ERDiagram |
+    GitDiagram |
+    C4Diagram
   )
 }
 
@@ -25,5 +40,18 @@
   SequenceDiagram,
   JourneyDiagram,
   RequirementDiagram,
-  GanttDiagram
+  GanttDiagram,
+  TimelineDiagram,
+  QuadrantDiagram,
+  SankeyDiagram,
+  XYChartDiagram,
+  PacketDiagram,
+  KanbanDiagram,
+  BlockDiagram,
+  ArchitectureDiagram,
+  ClassDiagram,
+  StateDiagram,
+  ERDiagram,
+  GitDiagram,
+  C4Diagram
 }

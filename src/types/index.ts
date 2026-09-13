@@ -7,6 +7,19 @@ export enum DiagramType {
   Journey = 'JourneyDiagram',
   Requirement = 'RequirementDiagram',
   Gantt = 'GanttDiagram',
+  Timeline = 'TimelineDiagram',
+  Quadrant = 'QuadrantDiagram',
+  Sankey = 'SankeyDiagram',
+  Xychart = 'XYChartDiagram',
+  Packet = 'PacketDiagram',
+  Kanban = 'KanbanDiagram',
+  Block = 'BlockDiagram',
+  Architecture = 'ArchitectureDiagram',
+  Class = 'ClassDiagram',
+  State = 'StateDiagram',
+  Er = 'ERDiagram',
+  Git = 'GitDiagram',
+  C4 = 'C4Diagram',
 }
 
 export enum MermaidDescriptionName {
@@ -18,6 +31,19 @@ export enum MermaidDescriptionName {
   Journey = 'journey',
   Requirement = 'requirementDiagram',
   Gantt = 'gantt',
+  Timeline = 'timeline',
+  Quadrant = 'quadrantChart',
+  Sankey = 'sankey-beta',
+  Xychart = 'xychart-beta',
+  Packet = 'packet-beta',
+  Kanban = 'kanban',
+  Block = 'block-beta',
+  Architecture = 'architecture-beta',
+  Class = 'classDiagram',
+  State = 'stateDiagram-v2',
+  Er = 'erDiagram',
+  Git = 'gitGraph',
+  C4 = 'C4Context',
 }
 
 export enum MermaidLanguageType {
@@ -29,6 +55,19 @@ export enum MermaidLanguageType {
   Journey = 'journey',
   Requirement = 'requirement',
   Gantt = 'gantt',
+  Timeline = 'timeline',
+  Quadrant = 'quadrant',
+  Sankey = 'sankey',
+  Xychart = 'xychart',
+  Packet = 'packet',
+  Kanban = 'kanban',
+  Block = 'block',
+  Architecture = 'architecture',
+  Class = 'class',
+  State = 'state',
+  Er = 'er',
+  Git = 'git',
+  C4 = 'c4',
 }
 
 export enum MermaidAlias {

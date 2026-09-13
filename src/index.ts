@@ -7,6 +7,19 @@ export {
   journeyLanguage,
   requirementLanguage,
   ganttLanguage,
+  timelineLanguage,
+  quadrantLanguage,
+  sankeyLanguage,
+  xychartLanguage,
+  packetLanguage,
+  kanbanLanguage,
+  blockLanguage,
+  architectureLanguage,
+  classLanguage,
+  stateLanguage,
+  erLanguage,
+  gitLanguage,
+  c4Language,
 } from './language-definitions';
 
 export {
@@ -18,6 +31,19 @@ export {
   journeyLanguageDescription,
   requirementLanguageDescription,
   ganttLanguageDescription,
+  timelineLanguageDescription,
+  quadrantLanguageDescription,
+  sankeyLanguageDescription,
+  xychartLanguageDescription,
+  packetLanguageDescription,
+  kanbanLanguageDescription,
+  blockLanguageDescription,
+  architectureLanguageDescription,
+  classLanguageDescription,
+  stateLanguageDescription,
+  erLanguageDescription,
+  gitLanguageDescription,
+  c4LanguageDescription,
 } from './language-descriptions';
 
 export {
@@ -29,6 +55,19 @@ export {
   journey,
   requirement,
   gantt,
+  timeline,
+  quadrant,
+  sankey,
+  xychart,
+  packet,
+  kanban,
+  block,
+  architecture,
+  classDiagram,
+  state,
+  er,
+  git,
+  c4,
 } from './language-support';
 
 export {
@@ -40,6 +79,19 @@ export {
   journeyTags,
   requirementTags,
   ganttTags,
+  timelineTags,
+  quadrantTags,
+  sankeyTags,
+  xychartTags,
+  packetTags,
+  kanbanTags,
+  blockTags,
+  architectureTags,
+  classTags,
+  stateTags,
+  erTags,
+  gitTags,
+  c4Tags,
 } from './tags';
 
 export { foldByIndent } from './extensions';

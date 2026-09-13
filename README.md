@@ -50,10 +50,10 @@ new EditorView({
 
 If you run this code in the browser, you should get syntax highlighting!
 
-![Mermaid mindmap syntax highlighting](https://raw.githubusercontent.com/inspirnathan/codemirror-lang-mermaid/main/.github/mindmap-syntax-highlighting.png)
+![Mermaid mindmap syntax highlighting](https://raw.githubusercontent.com/Edge-Tools/codemirror-lang-mermaid/main/.github/mindmap-syntax-highlighting.png)
 
 ## Supported Diagrams
-[Mermaid](https://mermaid.js.org/intro/) contains many different types of diagrams. Each diagram need its own [Lezer](https://lezer.codemirror.net/) grammar file. I'm currently working on building a grammar for each diagram. The following diagrams are supported so far.
+[Mermaid](https://mermaid.js.org/intro/) contains many different types of diagrams. Each diagram has its own [Lezer](https://lezer.codemirror.net/) grammar file. The following diagrams are supported:
 
 - [mindmaps](https://mermaid.js.org/syntax/mindmap.html)
 - [pie charts](https://mermaid.js.org/syntax/pie.html)
@@ -62,13 +62,28 @@ If you run this code in the browser, you should get syntax highlighting!
 - [user journeys](https://mermaid.js.org/syntax/userJourney.html)
 - [requirement diagrams](https://mermaid.js.org/syntax/requirementDiagram.html)
 - [gantt charts](https://mermaid.js.org/syntax/gantt.html)
+- [timelines](https://mermaid.js.org/syntax/timeline.html)
+- [quadrant charts](https://mermaid.js.org/syntax/quadrantChart.html)
+- [class diagrams](https://mermaid.js.org/syntax/classDiagram.html)
+- [state diagrams](https://mermaid.js.org/syntax/stateDiagram.html)
+- [entity relationship diagrams](https://mermaid.js.org/syntax/entityRelationshipDiagram.html)
+- [git graphs](https://mermaid.js.org/syntax/gitgraph.html)
+- [C4 diagrams](https://mermaid.js.org/syntax/c4.html)
+- [sankey diagrams](https://mermaid.js.org/syntax/sankey.html)
+- [XY charts](https://mermaid.js.org/syntax/xyChart.html)
+- [block diagrams](https://mermaid.js.org/syntax/block.html)
+- [packet diagrams](https://mermaid.js.org/syntax/packet.html)
+- [kanban boards](https://mermaid.js.org/syntax/kanban.html)
+- [architecture diagrams](https://mermaid.js.org/syntax/architecture.html)
+
+Each diagram type is also exported individually — as a `LanguageSupport` extension (e.g. `mindmap()`, `flowchart()`, `classDiagram()`), a `LRLanguage` (e.g. `mindmapLanguage`), a `LanguageDescription` (e.g. `mindmapLanguageDescription`), and a set of custom highlighting tags (e.g. `mindmapTags`). The all-encompassing `mermaid()` extension automatically detects the diagram type from the first line and applies the matching grammar.
 
 ## Supported Tags
 CodeMirror supports a long list of [tags](https://lezer.codemirror.net/docs/ref/#highlight.tags) that are suitable for handling syntax highlighting in a variety of languages. Some common tags include `name`, `variableName`, `lineComment`, `string`, and `number`.
 
 CodeMirror also supports the ability to create [custom tags](https://lezer.codemirror.net/docs/ref/#highlight.Tag). Custom tags are useful for styling tokens from a grammar that may not have a suitable tag available to us from CodeMirror.
 
-You can choose to style the syntax highlighting based on either the custom tag I have defined or its corresponding parent tag (if it has one). Please see the [tags file](https://github.com/inspirnathan/codemirror-lang-mermaid/blob/main/src/tags/index.ts) for a list of all custom tags I have defined and their corresponding parent tags.
+You can choose to style the syntax highlighting based on either the custom tag I have defined or its corresponding parent tag (if it has one). Please see the [tags file](https://github.com/Edge-Tools/codemirror-lang-mermaid/blob/main/src/tags/index.ts) for a list of all custom tags I have defined and their corresponding parent tags.
 
 ### Syntax Highlighting with Custom Tags
 Below is an example of using custom tags to highlight tokens in a pie chart Mermaid diagram.
@@ -102,7 +117,7 @@ new EditorView({
 
 Running this code in the browser should result in the following syntax highlighting.
 
-![Mermaid pie chart syntax highlighting with custom tags](https://raw.githubusercontent.com/inspirnathan/codemirror-lang-mermaid/main/.github/pie-chart-syntax-highlighting-custom-tags.png)
+![Mermaid pie chart syntax highlighting with custom tags](https://raw.githubusercontent.com/Edge-Tools/codemirror-lang-mermaid/main/.github/pie-chart-syntax-highlighting-custom-tags.png)
 
 ### Syntax Highlighting with Parent Tags
 Below is an example of using parent tags (defined by CodeMirror) to highlight tokens in a pie chart Mermaid diagram instead of using custom tags (defined by me).
@@ -135,7 +150,7 @@ new EditorView({
 
 Running this code in the browser should result in the following syntax highlighting.
 
-![Mermaid pie chart syntax highlighting with parent tags](https://raw.githubusercontent.com/inspirnathan/codemirror-lang-mermaid/main/.github/pie-chart-syntax-highlighting-parent-tags.png)
+![Mermaid pie chart syntax highlighting with parent tags](https://raw.githubusercontent.com/Edge-Tools/codemirror-lang-mermaid/main/.github/pie-chart-syntax-highlighting-parent-tags.png)
 
 ### When to use Custom Tags vs Parent Tags
 It's up to your preference! Though, I personally prefer custom tags 🙂. As stated previously, each Mermaid diagram requires its own Lezer grammar file, which essentially means each diagram uses its own "language." The language used in Mermaid diagrams is very different than typical programming languages and therefore will have tokens that don't have a corresponding match in CodeMirror's list of [tags](https://lezer.codemirror.net/docs/ref/#highlight.tags).
@@ -147,7 +162,7 @@ Do note that not all custom tags have parent tags (i.e. most of the mindmap tags
 ## Extensions
 The `codemirror-lang-mermaid` package provides support for the following extension:
 
-- [foldByIndent](https://github.com/inspirnathan/codemirror-lang-mermaid/blob/main/src/extensions/index.ts)
+- [foldByIndent](https://github.com/Edge-Tools/codemirror-lang-mermaid/blob/main/src/extensions/index.ts)
 
 By enabling the `foldByIndent` extension, the CodeMirror editor will add code folding support across all Mermaid diagrams. [Code folding](https://en.wikipedia.org/wiki/Code_folding) is a common feature in text editors and IDEs that let you hide ("fold") parts of a document. This can help make the document easier to read or manage. 
 
@@ -192,4 +207,4 @@ new EditorView({
 
 By adding `foldByIndent` to your list of extensions, code folding by indents will be enabled. Keep in mind that this example is using the `basicSetup` extension, provided by CodeMirror, which adds arrows on all lines that provide code folding support. The `foldByIndent` extension will fold code based on the number of indents on the current line and the number of indents on the following lines.
 
-![Mindmap diagram with code folding enabled](https://raw.githubusercontent.com/inspirnathan/codemirror-lang-mermaid/main/.github/mindmap-code-folding.gif)
+![Mindmap diagram with code folding enabled](https://raw.githubusercontent.com/Edge-Tools/codemirror-lang-mermaid/main/.github/mindmap-code-folding.gif)
