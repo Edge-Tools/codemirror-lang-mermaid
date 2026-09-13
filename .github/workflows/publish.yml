@@ -2,6 +2,11 @@ name: Publish to npm
 
 # Publishes the package to npm whenever a GitHub Release is published.
 # You can also run it by hand from the Actions tab (workflow_dispatch).
+#
+# Authentication uses npm "trusted publishing" (OIDC) — there is no NPM_TOKEN.
+# The registry verifies this workflow's identity via the id-token below, so a
+# matching trusted publisher must be configured on the package's npm settings
+# page (see the repo README / setup notes). Provenance is generated automatically.
 on:
   release:
     types: [published]
@@ -9,7 +14,7 @@ on:
 
 permissions:
   contents: read
-  id-token: write # required for npm provenance attestations
+  id-token: write # required for npm trusted publishing (OIDC) + provenance
 
 jobs:
   publish:
@@ -22,6 +27,10 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org
 
+      # Trusted publishing requires npm >= 11.5.1; setup-node still ships npm 10.
+      - name: Update npm
+        run: npm install -g npm@latest
+
       - name: Install dependencies
         run: npm ci
 
@@ -31,10 +40,5 @@ jobs:
       - name: Test
         run: npm test
 
-      # `--provenance` records a signed link from the package back to this
-      # commit and workflow run. It requires the repository to be public; if the
-      # repo is private, drop the `--provenance` flag.
       - name: Publish
-        run: npm publish --provenance --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish
